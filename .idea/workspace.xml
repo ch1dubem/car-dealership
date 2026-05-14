@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e5b6426-4eb3-42d1-bac9-80d275c93e56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="1e5b6426-4eb3-42d1-bac9-80d275c93e56" name="Changes" comment="Created Program class with main method that starts the UserInterface">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/inventory.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory_backup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_backup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/DealershipFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,22 +27,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ch1dubem"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ch1dubem&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ch1dubem/car-dealership.git",
-    "accountId": "f691a5c9-7f87-4121-84d0-0d8978fe6995"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ch1dubem/car-dealership.git&quot;,
+    &quot;accountId&quot;: &quot;f691a5c9-7f87-4121-84d0-0d8978fe6995&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3DdYTVKPi4jCMOz5VB7k8KOdH5d" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,16 +50,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Program.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/dubem/Desktop/plurasight/workshops/car-dealership",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1e5b6426-4eb3-42d1-bac9-80d275c93e56" name="Changes" comment="" />
@@ -68,9 +79,49 @@
       <option name="presentableId" value="Default" />
       <updated>1778613423707</updated>
     </task>
+    <task id="LOCAL-00001" summary=" Created Vehicle and Dealership data classes with constructors, getters/setters, addVehicle, getAllVehicles, and stub search methods returning null for price, make/model, year, color, mileage, and type filters">
+      <option name="closed" value="true" />
+      <created>1778710458605</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778710458605</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Create DealershipFileManager with getDealership method that reads inventory.csv, parses dealership info from first line and vehicles from remaining lines.">
+      <option name="closed" value="true" />
+      <created>1778714213580</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778714213580</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created UserInterface with display menu loop, init method to load dealership via DealershipFileManager, displayVehicles helper, processGetAllVehiclesRequest, and empty stubs for remaining process methods">
+      <option name="closed" value="true" />
+      <created>1778716573039</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778716573039</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created Program class with main method that starts the UserInterface">
+      <option name="closed" value="true" />
+      <created>1778716931238</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778716931238</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=" Created Vehicle and Dealership data classes with constructors, getters/setters, addVehicle, getAllVehicles, and stub search methods returning null for price, make/model, year, color, mileage, and type filters" />
+    <MESSAGE value="Create DealershipFileManager with getDealership method that reads inventory.csv, parses dealership info from first line and vehicles from remaining lines." />
+    <MESSAGE value="Created UserInterface with display menu loop, init method to load dealership via DealershipFileManager, displayVehicles helper, processGetAllVehiclesRequest, and empty stubs for remaining process methods" />
+    <MESSAGE value="Created Program class with main method that starts the UserInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Program class with main method that starts the UserInterface" />
   </component>
 </project>

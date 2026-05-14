@@ -74,12 +74,95 @@ public class UserInterface {
         displayVehicles(dealership.getAllVehicles());
     }
 
-    private void processGetByPriceRequest() {}
-    private void processGetByMakeModelRequest() {}
-    private void processGetByYearRequest() {}
-    private void processGetByColorRequest() {}
-    private void processGetByMileageRequest() {}
-    private void processGetByVehicleTypeRequest() {}
-    private void processAddVehicleRequest() {}
-    private void processRemoveVehicleRequest() {}
+    private void processGetByPriceRequest() {
+        System.out.print("Enter minimum price: ");
+        double min = Double.parseDouble(scanner.nextLine().trim());
+        System.out.print("Enter maximum price: ");
+        double max = Double.parseDouble(scanner.nextLine().trim());
+        displayVehicles(dealership.getVehiclesByPrice(min, max));
+    }
+
+    private void processGetByMakeModelRequest() {
+        System.out.println("Enter make: ");
+        String make = scanner.nextLine().trim();
+        System.out.println("Enter model: ");
+        String model = scanner.nextLine().trim();
+        displayVehicles(dealership.getVehiclesByMakeModel(make, model));
+    }
+
+    private void processGetByYearRequest() {
+        System.out.print("Enter minimum year: ");
+        int min = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter maximum year: ");
+        int max = Integer.parseInt(scanner.nextLine().trim());
+        displayVehicles(dealership.getVehiclesByYear(min, max));
+    }
+
+    private void processGetByColorRequest() {
+        System.out.print("Enter color: ");
+        String color = scanner.nextLine().trim();
+        displayVehicles(dealership.getVehiclesByColor(color));
+    }
+
+    private void processGetByMileageRequest() {
+        System.out.print("Enter minimum mileage: ");
+        double min = Double.parseDouble(scanner.nextLine().trim());
+        System.out.print("Enter maximum mileage: ");
+        double max = Double.parseDouble(scanner.nextLine().trim());
+        displayVehicles(dealership.getVehiclesByMileage(min, max));
+    }
+
+    private void processGetByVehicleTypeRequest() {
+        System.out.print("Enter vehicle type (car, truck, SUV, van): ");
+        String type = scanner.nextLine().trim();
+        displayVehicles(dealership.getVehiclesByType(type));
+    }
+
+    private void processAddVehicleRequest() {
+        System.out.print("Enter VIN: ");
+        int vin = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter year: ");
+        int year = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter make: ");
+        String make = scanner.nextLine().trim();
+        System.out.print("Enter model: ");
+        String model = scanner.nextLine().trim();
+        System.out.print("Enter type (car, truck, SUV, van): ");
+        String type = scanner.nextLine().trim();
+        System.out.print("Enter color: ");
+        String color = scanner.nextLine().trim();
+        System.out.print("Enter odometer: ");
+        int odometer = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter price: ");
+        double price = Double.parseDouble(scanner.nextLine().trim());
+
+        Vehicle vehicle = new Vehicle(vin, year, make, model, type, color, odometer, price);
+        dealership.addVehicle(vehicle);
+
+        DealershipFileManager manager = new DealershipFileManager();
+        manager.saveDealership(dealership);
+        System.out.println("Vehicle added!");
+    }
+
+    private void processRemoveVehicleRequest() {
+        System.out.print("Enter VIN of vehicle to remove: ");
+        int vin = Integer.parseInt(scanner.nextLine().trim());
+
+        Vehicle toRemove = null;
+        for (Vehicle v : dealership.getAllVehicles()) {
+            if (v.getVin() == vin) {
+                toRemove = v;
+                break;
+            }
+        }
+
+        if (toRemove != null) {
+            dealership.removeVehicle(toRemove);
+            DealershipFileManager manager = new DealershipFileManager();
+            manager.saveDealership(dealership);
+            System.out.println("Vehicle removed!");
+        } else {
+            System.out.println("Vehicle not found with VIN: " + vin);
+        }
+    }
 }

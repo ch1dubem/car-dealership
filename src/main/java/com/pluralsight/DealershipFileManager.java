@@ -38,6 +38,19 @@ public class DealershipFileManager {
     }
 
     public void saveDealership(Dealership dealership) {
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("inventory.csv"));
+            bw.write(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhone());
+            bw.newLine();
 
+            for (Vehicle v : dealership.getAllVehicles()) {
+                bw.write(v.getVin() + "|" + v.getYear() + "|" + v.getMake() + "|" + v.getModel() + "|" + v.getVehicleType() + "|" + v.getColor() + "|" + v.getOdometer() + "|" + v.getPrice());
+                bw.newLine();
+            }
+            bw.close();
+
+        } catch (IOException e) {
+            System.out.println("Error saving dealership file.");
+        }
     }
 }
